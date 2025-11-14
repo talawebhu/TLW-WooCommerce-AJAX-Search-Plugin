@@ -26,7 +26,7 @@ msgstr "Kérjük, telepítsd és aktiváld a WooCommerce plugint a TLW WooCommer
 
 #: includes/class-shortcode.php:42
 msgid "Search products..."
-msgstr "Termékek keresése..."
+msgstr "Keresés név vagy cikkszám alapján..."
 
 #: includes/class-shortcode.php:43
 msgid "Search"
@@ -40,13 +40,13 @@ msgstr "Termékek keresése"
 msgid "Security check failed"
 msgstr "Biztonsági ellenőrzés sikertelen"
 
-#: includes/class-ajax-handler.php:47
+#: includes/class-ajax-handler.php:47 includes/class-assets.php:67
 msgid "Please enter at least 2 characters"
-msgstr "Kérjük, adj meg legalább 2 karaktert"
+msgstr "Gépelj be legalább 2 karaktert"
 
-#: includes/class-ajax-handler.php:55
+#: includes/class-ajax-handler.php:55 includes/class-assets.php:66
 msgid "No products found"
-msgstr "Nem található termék"
+msgstr "Nincs találat"
 
 #: includes/class-ajax-handler.php:108
 msgid "In stock"
@@ -55,3 +55,15 @@ msgstr "Raktáron"
 #: includes/class-ajax-handler.php:108
 msgid "Out of stock"
 msgstr "Nincs raktáron"
+
+#: includes/class-assets.php:65
+msgid "Searching..."
+msgstr "Keresés..."
+
+#: includes/class-assets.php:68
+msgid "An error occurred. Please try again."
+msgstr "Hiba történt. Kérjük, próbáld újra."
+
+#: includes/class-assets.php:69
+msgid "View all results"
+msgstr "Összes találat megtekintése"

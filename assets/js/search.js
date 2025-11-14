@@ -80,7 +80,11 @@
                 } else if (e.keyCode === 13) { // Enter
                     e.preventDefault();
                     if ($active.length > 0) {
+                        // Navigate to selected product
                         window.location.href = $active.find('a').attr('href');
+                    } else {
+                        // Submit the form to show all search results
+                        $(this).closest('form').submit();
                     }
                 } else if (e.keyCode === 27) { // Escape
                     $results.hide();
@@ -134,6 +138,8 @@
 
         displayResults($container, products) {
             const $results = $container.find('.tlw-woo-search-results');
+            const $input = $container.find('.tlw-woo-search-input');
+            const query = $input.val().trim();
             let html = '<div class="tlw-search-results-list">';
 
             products.forEach(function(product) {
@@ -147,7 +153,6 @@
                             </div>
                             <div class="tlw-search-result-content">
                                 <h4 class="tlw-search-result-title">${product.title}</h4>
-                                ${product.sku ? `<span class="tlw-search-result-sku">SKU: ${product.sku}</span>` : ''}
                                 ${product.excerpt ? `<p class="tlw-search-result-excerpt">${product.excerpt}</p>` : ''}
                                 <div class="tlw-search-result-meta">
                                     <span class="tlw-search-result-price">${product.price}</span>
@@ -160,6 +165,16 @@
             });
 
             html += '</div>';
+            
+            // Add "View All Results" link
+            const searchUrl = $container.find('form').attr('action') + '?s=' + encodeURIComponent(query) + '&post_type=product';
+            html += `
+                <div class="tlw-search-view-all">
+                    <a href="${searchUrl}" class="tlw-search-view-all-link">
+                        ${tlwWooAjaxSearch.strings.viewAll}
+                    </a>
+                </div>
+            `;
             
             $results.html(html).show();
         }

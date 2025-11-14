@@ -63,6 +63,7 @@ class TLW_WooCommerce_Ajax_Search_Assets {
                     'noResults'   => __('No products found', 'tlw-woo-ajax-search'),
                     'minChars'    => __('Please enter at least 2 characters', 'tlw-woo-ajax-search'),
                     'error'       => __('An error occurred. Please try again.', 'tlw-woo-ajax-search'),
+                    'viewAll'     => __('View all results', 'tlw-woo-ajax-search'),
                 )
             )
         );

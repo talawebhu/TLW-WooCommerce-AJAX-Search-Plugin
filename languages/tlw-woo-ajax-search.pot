@@ -34,11 +34,11 @@ msgstr ""
 msgid "Security check failed"
 msgstr ""
 
-#: includes/class-ajax-handler.php:47
+#: includes/class-ajax-handler.php:47 includes/class-assets.php:67
 msgid "Please enter at least 2 characters"
 msgstr ""
 
-#: includes/class-ajax-handler.php:55
+#: includes/class-ajax-handler.php:55 includes/class-assets.php:66
 msgid "No products found"
 msgstr ""
 
@@ -48,4 +48,16 @@ msgstr ""
 
 #: includes/class-ajax-handler.php:108
 msgid "Out of stock"
+msgstr ""
+
+#: includes/class-assets.php:65
+msgid "Searching..."
+msgstr ""
+
+#: includes/class-assets.php:68
+msgid "An error occurred. Please try again."
+msgstr ""
+
+#: includes/class-assets.php:69
+msgid "View all results"
 msgstr ""

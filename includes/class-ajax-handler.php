@@ -68,13 +68,38 @@ class TLW_WooCommerce_Ajax_Search_Handler {
      * @return array
      */
     private function search_products($search_query) {
+        global $wpdb;
+        
+        $search_term = '%' . $wpdb->esc_like($search_query) . '%';
+        
+        // Search in title and SKU only, order by stock status first, then alphabetically
+        $product_ids = $wpdb->get_col($wpdb->prepare("
+            SELECT DISTINCT p.ID 
+            FROM {$wpdb->posts} p
+            LEFT JOIN {$wpdb->postmeta} pm ON p.ID = pm.post_id AND pm.meta_key = '_sku'
+            LEFT JOIN {$wpdb->postmeta} stock ON p.ID = stock.post_id AND stock.meta_key = '_stock_status'
+            WHERE p.post_type = 'product' 
+            AND p.post_status = 'publish'
+            AND (
+                p.post_title LIKE %s
+                OR pm.meta_value LIKE %s
+            )
+            ORDER BY 
+                CASE WHEN stock.meta_value = 'instock' THEN 0 ELSE 1 END,
+                p.post_title ASC
+            LIMIT 10
+        ", $search_term, $search_term));
+        
+        if (empty($product_ids)) {
+            return array();
+        }
+        
         $args = array(
             'post_type'      => 'product',
             'post_status'    => 'publish',
             'posts_per_page' => 10,
-            's'              => $search_query,
-            'orderby'        => 'relevance',
-            'order'          => 'DESC',
+            'post__in'       => $product_ids,
+            'orderby'        => 'post__in',
         );
         
         // Apply WooCommerce product visibility

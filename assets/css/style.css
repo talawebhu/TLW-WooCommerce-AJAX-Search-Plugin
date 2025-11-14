@@ -20,23 +20,14 @@
 
 .tlw-woo-search-input {
     width: 100%;
-    padding: 12px 45px 12px 15px;
-    border: 2px solid #ddd;
-    border-radius: 4px;
-    font-size: 16px;
+    padding: 6px 12px;
+    border: 1px solid #ddd;
     outline: none;
     transition: border-color 0.3s ease;
 }
 
 .tlw-woo-search-input:focus {
     border-color: #0073aa;
-}
-
-.tlw-woo-search-container.loading .tlw-woo-search-input {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50"><circle cx="25" cy="25" r="20" fill="none" stroke="%230073aa" stroke-width="4" stroke-dasharray="31.4 31.4" transform="rotate(0 25 25)"><animateTransform attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="1s" repeatCount="indefinite"/></circle></svg>');
-    background-repeat: no-repeat;
-    background-position: right 15px center;
-    background-size: 20px 20px;
 }
 
 .tlw-woo-search-icon {
@@ -47,6 +38,11 @@
     width: 20px;
     height: 20px;
     pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.tlw-woo-search-container.loading .tlw-woo-search-icon {
+    opacity: 0;
 }
 
 .tlw-woo-search-icon svg {
@@ -206,6 +202,30 @@
     text-align: center;
     color: #0073aa;
     font-size: 14px;
+}
+
+.tlw-search-view-all {
+    padding: 12px 15px;
+    border-top: 2px solid #f0f0f0;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.tlw-search-view-all-link {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #0073aa;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.tlw-search-view-all-link:hover {
+    background-color: #005a87;
+    color: #fff;
 }
 
 /* Responsive Design */
