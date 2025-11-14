@@ -159,9 +159,5 @@ Ez a plugin GPL v2 vagy későbbi licensz alatt került kiadásra.
 
 ## Készítette
 
-**TalaWeb**
+**TALAWEB - the freelance web geek**
 - Weboldal: https://talaweb.hu
-
----
-
-Köszönjük, hogy a TLW WooCommerce AJAX Search plugint választottad!
