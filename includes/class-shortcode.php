@@ -57,10 +57,7 @@ class TLW_WooCommerce_Ajax_Search_Shortcode {
                         aria-label="<?php esc_attr_e('Search products', 'tlw-woo-ajax-search'); ?>"
                     >
                     <span class="tlw-woo-search-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
+                        <span class="dashicons dashicons-search"></span>
                     </span>
                 </div>
                 <?php if ($atts['show_button'] === 'yes') : ?>
