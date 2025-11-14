@@ -75,6 +75,16 @@ function tlw_woo_ajax_search_init() {
 add_action('plugins_loaded', 'tlw_woo_ajax_search_init');
 
 /**
+ * Declare compatibility with WooCommerce features
+ */
+add_action('before_woocommerce_init', function() {
+    if (class_exists(\Automattic\WooCommerce\Utilities\FeaturesUtil::class)) {
+        \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility('custom_order_tables', __FILE__, true);
+        \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility('cart_checkout_blocks', __FILE__, true);
+    }
+});
+
+/**
  * Activation hook
  */
 function tlw_woo_ajax_search_activate() {
