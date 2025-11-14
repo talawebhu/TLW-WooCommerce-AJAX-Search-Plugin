@@ -1,0 +1,51 @@
+# Copyright (C) 2025 TLW WooCommerce AJAX Search
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: TLW WooCommerce AJAX Search 1.0.0\n"
+"Report-Msgid-Bugs-To: https://talaweb.hu\n"
+"POT-Creation-Date: 2025-11-14 12:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: TALAWEB <info@talaweb.hu>\n"
+
+#: tlw-woocommerce-ajax-search.php:48
+msgid "TLW WooCommerce AJAX Search requires WooCommerce to be installed and active."
+msgstr ""
+
+#: tlw-woocommerce-ajax-search.php:92
+msgid "Please install and activate WooCommerce before activating TLW WooCommerce AJAX Search."
+msgstr ""
+
+#: includes/class-shortcode.php:42
+msgid "Search products..."
+msgstr ""
+
+#: includes/class-shortcode.php:43
+msgid "Search"
+msgstr ""
+
+#: includes/class-shortcode.php:56
+msgid "Search products"
+msgstr ""
+
+#: includes/class-ajax-handler.php:40
+msgid "Security check failed"
+msgstr ""
+
+#: includes/class-ajax-handler.php:47
+msgid "Please enter at least 2 characters"
+msgstr ""
+
+#: includes/class-ajax-handler.php:55
+msgid "No products found"
+msgstr ""
+
+#: includes/class-ajax-handler.php:108
+msgid "In stock"
+msgstr ""
+
+#: includes/class-ajax-handler.php:108
+msgid "Out of stock"
+msgstr ""

@@ -6,7 +6,7 @@
  * Version: 1.0.0
  * Author: TALAWEB - the freelance web geek
  * Author URI: https://talaweb.hu
- * Text Domain: tlw-wc-ajax-search
+ * Text Domain: tlw-woo-ajax-search
  * Domain Path: /languages
  * Requires at least: 5.8
  * Requires PHP: 7.4
@@ -45,7 +45,7 @@ function tlw_woo_ajax_search_check_woocommerce() {
 function tlw_woo_ajax_search_woocommerce_missing_notice() {
     ?>
     <div class="error">
-        <p><?php _e('TLW WooCommerce AJAX Search requires WooCommerce to be installed and active.', 'tlw-wc-ajax-search'); ?></p>
+        <p><?php _e('TLW WooCommerce AJAX Search requires WooCommerce to be installed and active.', 'tlw-woo-ajax-search'); ?></p>
     </div>
     <?php
 }
@@ -59,7 +59,7 @@ function tlw_woo_ajax_search_init() {
     }
 
     // Load plugin text domain
-    load_plugin_textdomain('tlw-wc-ajax-search', false, dirname(TLW_WOO_AJAX_SEARCH_PLUGIN_BASENAME) . '/languages');
+    load_plugin_textdomain('tlw-woo-ajax-search', false, dirname(TLW_WOO_AJAX_SEARCH_PLUGIN_BASENAME) . '/languages');
 
     // Include required files
     require_once TLW_WOO_AJAX_SEARCH_PLUGIN_DIR . 'includes/class-ajax-handler.php';
@@ -89,7 +89,7 @@ add_action('before_woocommerce_init', function() {
  */
 function tlw_woo_ajax_search_activate() {
     if (!tlw_woo_ajax_search_check_woocommerce()) {
-        wp_die(__('Please install and activate WooCommerce before activating TLW WooCommerce AJAX Search.', 'tlw-wc-ajax-search'));
+        wp_die(__('Please install and activate WooCommerce before activating TLW WooCommerce AJAX Search.', 'tlw-woo-ajax-search'));
     }
 }
 
