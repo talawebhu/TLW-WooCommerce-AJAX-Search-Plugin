@@ -153,6 +153,7 @@
                             </div>
                             <div class="tlw-search-result-content">
                                 <h4 class="tlw-search-result-title">${product.title}</h4>
+                                <div class="tlw-search-result-sku">${product.sku}</div>
                                 ${product.excerpt ? `<p class="tlw-search-result-excerpt">${product.excerpt}</p>` : ''}
                                 <div class="tlw-search-result-meta">
                                     <span class="tlw-search-result-price">${product.price}</span>
